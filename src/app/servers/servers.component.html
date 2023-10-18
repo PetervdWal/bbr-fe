@@ -1,6 +1,4 @@
-<ng-container>
-  <button type=button (click)="getServers()">ClickMe</button>
-</ng-container>
+
 <main class="container">
   <figure>
     <table>
@@ -18,7 +16,7 @@
       <th>AntiCheat</th>
       <th>Build</th>
       </thead>
-      <tr *ngFor="let server of servers; index as i;">
+      <tr *ngFor="let server of servers | slice:0+navigationIndex*20:20+navigationIndex*20; index as i;">
         <td>{{i}}</td>
         <td>{{server.Map}}</td>
         <td>{{server.Name}}</td>
