@@ -1,36 +1,37 @@
-<p>servers works!</p>
-
-<ng-container >
+<ng-container>
   <button type=button (click)="getServers()">ClickMe</button>
 </ng-container>
-
-<table>
-<thead>
-  <th>#</th>
-  <th>Map</th>
-  <th>Name server</th>  
-  <th>Gamemode</th>
-  <th>Region</th>
-  <th>Players</th>
-  <th>Queued</th>
-  <th>Day/Night</th>
-  <th>Official</th>
-  <th>HasPassword</th>
-  <th>AntiCheat</th>
-  <th>Build</th>
-</thead>
-<tr *ngFor="let server of servers; index as i;">
-<td>{{i}}</td>
-<td>{{server.Map}}</td>
-<td>{{server.Name}}</td>
-<td>{{server.Gamemode}}</td>
-<td>{{server.Region}}</td>
-<td>{{server.Players}}</td>
-<td>{{server.QueuePlayers}}</td>
-<td>{{server.DayNight}}</td>
-<td>{{server.IsOfficial}}</td>
-<td>{{server.HasPassword}}</td>
-<td>{{server.AntiCheat}}</td>
-<td>{{server.Build}}</td>
-</tr>
-</table>
+<main class="container">
+  <figure>
+    <table>
+      <thead>
+      <th>#</th>
+      <th>Map</th>
+      <th>Name server</th>
+      <th>Gamemode</th>
+      <th>Region</th>
+      <th>Players</th>
+      <th>Queued</th>
+      <th>Day/Night</th>
+      <th>Official</th>
+      <th>HasPassword</th>
+      <th>AntiCheat</th>
+      <th>Build</th>
+      </thead>
+      <tr *ngFor="let server of servers; index as i;">
+        <td>{{i}}</td>
+        <td>{{server.Map}}</td>
+        <td>{{server.Name}}</td>
+        <td>{{server.Gamemode}}</td>
+        <td>{{server.Region}}</td>
+        <td>{{server.Players}}</td>
+        <td>{{server.QueuePlayers}}</td>
+        <td>{{server.DayNight}}</td>
+        <td>{{server.IsOfficial}}</td>
+        <td>{{server.HasPassword}}</td>
+        <td>{{server.AntiCheat}}</td>
+        <td>{{server.Build}}</td>
+      </tr>
+    </table>
+  </figure>
+</main>
