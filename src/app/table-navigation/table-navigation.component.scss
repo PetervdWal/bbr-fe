@@ -1,0 +1,13 @@
+@import "@picocss/pico/scss/pico";
+
+.grid {
+  div {
+    padding: 1rem;
+    background: $grey-900;
+    text-align: center;
+  }
+
+  div:hover {
+    cursor: pointer;
+  }
+}
