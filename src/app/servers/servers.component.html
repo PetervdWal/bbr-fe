@@ -5,28 +5,22 @@
         <thead>
         <th>#</th>
         <th>Map</th>
-        <th>Name server</th>
-        <th>Gamemode</th>
-        <th>Region</th>
-        <th>Players</th>
         <th>Daypart</th>
-        <th>Official</th>
-        <th>HasPassword</th>
-        <th>AntiCheat</th>
-        <th>Build</th>
+        <th>Servers</th>
+        <th>Gamemode</th>
+        <th>Players</th>
+        <th>Region</th>
         </thead>
         <tr *ngFor="let server of servers | slice:0+navigationIndex*20:20+navigationIndex*20; index as i;">
           <td>{{navigationIndex*20+i}}</td>
           <td>{{server.Map}} <img [src]="server.Map | bbrMap"/></td>
-          <td>{{server.Name}}</td>
-          <td>{{server.Gamemode}}</td>
-          <td><img [src]="server.Region | bbrRegion"/></td>
-          <td>{{server.Players}}/{{server.MaxPlayers}}({{server.QueuePlayers}})</td>
           <td>{{server.DayNight}}</td>
-          <td>{{server.IsOfficial}}</td>
-          <td>{{server.HasPassword}}</td>
-          <td>{{server.AntiCheat}}</td>
-          <td>{{server.Build}}</td>
+          <td>{{server.Name}} | {{server.IsOfficial}} | {{server.HasPassword}} | {{server.AntiCheat}} |
+            {{server.Build}}
+          </td>
+          <td>{{server.Gamemode}}</td>
+          <td>{{server.Players}}/{{server.MaxPlayers}}({{server.QueuePlayers}})</td>
+          <td><img [src]="server.Region | bbrRegion"/></td>
         </tr>
       </table>
     </figure>
