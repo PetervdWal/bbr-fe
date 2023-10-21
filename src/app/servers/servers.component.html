@@ -9,7 +9,7 @@
         <th>Gamemode</th>
         <th>Region</th>
         <th>Players</th>
-        <th>Day/Night</th>
+        <th>Daypart</th>
         <th>Official</th>
         <th>HasPassword</th>
         <th>AntiCheat</th>
@@ -17,7 +17,7 @@
         </thead>
         <tr *ngFor="let server of servers | slice:0+navigationIndex*20:20+navigationIndex*20; index as i;">
           <td>{{navigationIndex*20+i}}</td>
-          <td>{{server.Map}}</td>
+          <td>{{server.Map}} <img [src]="server.Map | bbrMap"/></td>
           <td>{{server.Name}}</td>
           <td>{{server.Gamemode}}</td>
           <td><img [src]="server.Region | bbrRegion"/></td>
@@ -30,6 +30,7 @@
         </tr>
       </table>
     </figure>
-    <ui-table-navigation [amountOfItems]="amountOfNavigationItems(servers)" (indexClicked)="onIndexClicked($event)"></ui-table-navigation>
+    <ui-table-navigation [amountOfItems]="amountOfNavigationItems(servers)"
+                         (indexClicked)="onIndexClicked($event)"></ui-table-navigation>
   </ng-container>
 </section>
