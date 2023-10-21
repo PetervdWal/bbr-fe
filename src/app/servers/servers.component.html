@@ -9,7 +9,6 @@
         <th>Gamemode</th>
         <th>Region</th>
         <th>Players</th>
-        <th>Queued</th>
         <th>Day/Night</th>
         <th>Official</th>
         <th>HasPassword</th>
@@ -21,9 +20,8 @@
           <td>{{server.Map}}</td>
           <td>{{server.Name}}</td>
           <td>{{server.Gamemode}}</td>
-          <td>{{server.Region}}</td>
-          <td>{{server.Players}}</td>
-          <td>{{server.QueuePlayers}}</td>
+          <td><img [src]="server.Region | bbrRegion"/></td>
+          <td>{{server.Players}}/{{server.MaxPlayers}}({{server.QueuePlayers}})</td>
           <td>{{server.DayNight}}</td>
           <td>{{server.IsOfficial}}</td>
           <td>{{server.HasPassword}}</td>
