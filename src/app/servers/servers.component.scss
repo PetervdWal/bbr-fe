@@ -1,3 +1,5 @@
-img {
-  width: 60px;
+@import "@picocss/pico/scss/pico";
+
+section {
+  background-color: $grey-900;
 }
