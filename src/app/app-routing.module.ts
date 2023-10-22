@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {ServersContainerComponent} from "./servers-container/servers-container.component";
-import { TableNavigationComponent } from './table-navigation/table-navigation.component';
+import { ServersContainerComponent } from './servers-container/servers-container.component';
+import { MapIconComponent } from './servers/map-icon/map-icon.component';
 
 const routes: Routes = [
   {
-     path: 'servers',
-    component: ServersContainerComponent
+    path: 'servers',
+    component: ServersContainerComponent,
   },
   {
     path: 'ui',
-    component: TableNavigationComponent
-  }
+    component: MapIconComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

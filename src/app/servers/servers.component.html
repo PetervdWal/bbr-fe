@@ -13,7 +13,9 @@
         </thead>
         <tr *ngFor="let server of servers | slice:0+navigationIndex*20:20+navigationIndex*20; index as i;">
           <td>{{navigationIndex*20+i}}</td>
-          <td>{{server.Map}} <img [src]="server.Map | bbrMap"/></td>
+          <td>
+            <app-map-icon [map]="server.Map"></app-map-icon>
+          </td>
           <td>{{server.DayNight}}</td>
           <td>
             <app-server-name

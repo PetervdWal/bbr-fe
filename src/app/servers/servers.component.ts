@@ -5,6 +5,7 @@ import { TableNavigationComponent } from '../table-navigation/table-navigation.c
 import { RegionPipe } from './region.pipe';
 import { MapPipe } from './map.pipe';
 import { ServerNameComponent } from './server-name/server-name.component';
+import { MapIconComponent } from './map-icon/map-icon.component';
 
 @Component({
   selector: 'app-servers',
@@ -16,7 +17,7 @@ import { ServerNameComponent } from './server-name/server-name.component';
     TableNavigationComponent,
     ServerNameComponent,
     RegionPipe,
-    MapPipe,
+    MapIconComponent,
   ],
 })
 export class ServersComponent {
