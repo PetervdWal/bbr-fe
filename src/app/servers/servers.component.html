@@ -15,8 +15,10 @@
           <td>{{navigationIndex*20+i}}</td>
           <td>{{server.Map}} <img [src]="server.Map | bbrMap"/></td>
           <td>{{server.DayNight}}</td>
-          <td>{{server.Name}} | {{server.IsOfficial}} | {{server.HasPassword}} | {{server.AntiCheat}} |
-            {{server.Build}}
+          <td>
+            <app-server-name
+              [server]="server"
+            ></app-server-name>
           </td>
           <td>{{server.Gamemode}}</td>
           <td>{{server.Players}}/{{server.MaxPlayers}}({{server.QueuePlayers}})</td>

@@ -4,13 +4,20 @@ import { Server } from 'battlebit-remastered-ts-api';
 import { TableNavigationComponent } from '../table-navigation/table-navigation.component';
 import { RegionPipe } from './region.pipe';
 import { MapPipe } from './map.pipe';
+import { ServerNameComponent } from './server-name/server-name.component';
 
 @Component({
   selector: 'app-servers',
   standalone: true,
   templateUrl: './servers.component.html',
   styleUrls: ['./servers.component.scss'],
-  imports: [CommonModule, TableNavigationComponent, RegionPipe, MapPipe],
+  imports: [
+    CommonModule,
+    TableNavigationComponent,
+    ServerNameComponent,
+    RegionPipe,
+    MapPipe,
+  ],
 })
 export class ServersComponent {
   navigationIndex: number = 0;
