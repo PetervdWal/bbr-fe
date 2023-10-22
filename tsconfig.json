@@ -20,6 +20,11 @@
     "module": "ES2022",
     "esModuleInterop": true,
     "useDefineForClassFields": false,
+    "paths": {
+      "testing": [
+        "dist/testing"
+      ]
+    },
     "lib": [
       "ES2022",
       "dom"
