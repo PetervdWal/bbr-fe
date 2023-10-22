@@ -7,7 +7,7 @@
       <ng-container *ngIf="server.IsOfficial"><i class="fa-solid fa-square-check"></i></ng-container>
       <ng-container *ngIf="!server.IsOfficial"><i class="fa-solid fa-users"></i></ng-container>
       <ng-container *ngIf="server.HasPassword"><span> | </span><i class="fa-solid fa-lock"></i></ng-container>
-      | {{server.AntiCheat}} | {{server.Build}}
+      <span> | {{server.AntiCheat}} | {{server.Region | bbrRegion}} | {{server.Build}}</span>
     </div>
   </div>
 

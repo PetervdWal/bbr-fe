@@ -5,18 +5,17 @@ import { Pipe, PipeTransform } from '@angular/core';
   standalone: true,
 })
 export class RegionPipe implements PipeTransform {
-  readonly #placeholder = 'https://placehold.co/150x100?text=';
   readonly #regionMap: Record<string, string | undefined> = {
-    Brazil_Central: `${this.#placeholder}BR-central`,
-    America_Central: `${this.#placeholder}US-central`,
-    Europe_Central: `${this.#placeholder}EU-central`,
-    Asia_Central: `${this.#placeholder}AS-central`,
-    Australia_Central: `${this.#placeholder}AU-central`,
-    Japan_Central: `${this.#placeholder}JP-central`,
+    Brazil_Central: 'BR-central',
+    America_Central: `US-central`,
+    Europe_Central: `EU-central`,
+    Asia_Central: `AS-central`,
+    Australia_Central: `AU-central`,
+    Japan_Central: `JP-central`,
   };
 
   transform(region: string): string {
     const transformKey = this.#regionMap[region];
-    return transformKey ? transformKey : `${this.#placeholder}${region}`;
+    return transformKey ? transformKey : `${region}`;
   }
 }

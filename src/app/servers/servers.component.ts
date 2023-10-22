@@ -16,7 +16,6 @@ import { MapIconComponent } from './map-icon/map-icon.component';
     CommonModule,
     TableNavigationComponent,
     ServerNameComponent,
-    RegionPipe,
     MapIconComponent,
   ],
 })

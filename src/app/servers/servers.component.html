@@ -3,28 +3,22 @@
     <figure>
       <table>
         <thead>
-        <th>#</th>
         <th>Map</th>
-        <th>Daypart</th>
         <th>Servers</th>
         <th>Gamemode</th>
         <th>Players</th>
-        <th>Region</th>
         </thead>
         <tr *ngFor="let server of servers | slice:0+navigationIndex*20:20+navigationIndex*20; index as i;">
-          <td>{{navigationIndex*20+i}}</td>
           <td>
             <app-map-icon [map]="server.Map"></app-map-icon>
           </td>
-          <td>{{server.DayNight}}</td>
           <td>
             <app-server-name
               [server]="server"
             ></app-server-name>
           </td>
-          <td>{{server.Gamemode}}</td>
+          <td>{{server.Gamemode}} ({{server.DayNight}})</td>
           <td>{{server.Players}}/{{server.MaxPlayers}}({{server.QueuePlayers}})</td>
-          <td><img [src]="server.Region | bbrRegion"/></td>
         </tr>
       </table>
     </figure>
