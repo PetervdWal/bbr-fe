@@ -5,13 +5,16 @@
 
     <div class="server-info">
       <ng-container *ngIf="server.IsOfficial"><i data-bbr-automation-id='official-server-icon'
+                                                 title="Official server hosted by BattleBitRemastered"
                                                  class="fa-solid fa-building"></i></ng-container>
       <ng-container *ngIf="server.IsOfficial === false"><i data-bbr-automation-id='community-icon'
+                                                           title="Community server"
                                                            class="fa-solid fa-users"></i>
       </ng-container>
       <ng-container *ngIf="server.HasPassword">
         <span> | <i
           class="fa-solid fa-lock"
+          title="Password Protected"
           data-bbr-automation-id='password-protected-icon'></i></span></ng-container>
       <span data-bbr-automation-id='server-info-span'> | {{server.AntiCheat}} | {{server.Region | bbrRegion}} | {{server.Build}}</span>
     </div>
