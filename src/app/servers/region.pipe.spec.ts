@@ -9,6 +9,7 @@ describe('RegionPipe', () => {
     ${'Asia_Central'}      | ${'https://placehold.co/150x100?text=AS-central'}
     ${'Australia_Central'} | ${'https://placehold.co/150x100?text=AU-central'}
     ${'Japan_Central'}     | ${'https://placehold.co/150x100?text=JP-central'}
+    ${'UnmappedRegion'}    | ${'https://placehold.co/150x100?text=UnmappedRegion'}
   `('transforms the proper $key', ({ key, url }) => {
     const pipe = new RegionPipe();
     expect(pipe).toBeTruthy();
